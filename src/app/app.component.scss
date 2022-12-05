@@ -6,3 +6,10 @@
   background-size: contain;
   background-position: center;
 }
+.no-image{
+  background-image: url("/assets/image/no-image.jpeg");
+}
+#btn-remove{
+  height: 50px;
+  vertical-align: center;
+}

@@ -16,8 +16,11 @@
 </div>
 <div class="mb-3">
   <label for="file-profile" class="form-label">Select your profile picture</label>
-  <input type="file" class="form-control" id="file-profile">
-  <div class="mt-2" id="preview"></div>
+  <input #file  (change)="updatePic($event)"  type="file" class="form-control" id="file-profile" accept="image/*">
+  <div class="d-flex gap-2">
+  <div class="mt-2 no-image" id="preview" [style.background-image]="imageUrl"></div>
+    <button class="btn d-flex btn-danger align-items-start" id="btn-remove" (click)="removePic(file)">Remove</button>
+  </div>
 </div>
 <div class="mb-3">
   <button class="btn btn-primary">Sign Up</button>
