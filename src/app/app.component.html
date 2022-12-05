@@ -4,15 +4,15 @@
 <hr>
 <div class="mb-3">
   <label for="txt-full-name" class="form-label">Email address</label>
-  <input type="text" class="form-control" id="txt-full-name" placeholder="Eg: Kasun Nirmal">
+  <input type="text" [(ngModel)]="fullName" class="form-control" id="txt-full-name" placeholder="Eg: Kasun Nirmal">
 </div>
 <div class="mb-3">
   <label for="txt-username" class="form-label">Email Username</label>
-  <input type="text" class="form-control" id="txt-username" placeholder="Eg: kasun-nuwan">
+  <input type="text" [(ngModel)]="username" class="form-control" id="txt-username" placeholder="Eg: kasun-nuwan">
 </div>
 <div class="mb-3">
   <label for="txt-password" class="form-label">Email Password</label>
-  <input type="text" class="form-control" id="txt-password">
+  <input type="text" [(ngModel)]="password" class="form-control" id="txt-password">
 </div>
 <div class="mb-3">
   <label for="file-profile" class="form-label">Select your profile picture</label>
@@ -23,5 +23,5 @@
   </div>
 </div>
 <div class="mb-3">
-  <button class="btn btn-primary">Sign Up</button>
+  <button class="btn btn-primary" (click)="signUp(file.files.item(0))">Sign Up</button>
 </div>
